@@ -7,12 +7,7 @@ import java.io.File;
  */
 public class FileDistribution {
     private StringBuffer path = new StringBuffer();
-
-    /**
-     * Creates new default instance.
-     */
-    public FileDistribution() {
-    }
+    private String ext = ".dat";
 
     /**
      * Creates new instance with directory prefix.
@@ -32,12 +27,12 @@ public class FileDistribution {
      * @param ext
      *            file extension.
      */
-    public void addExtension(String ext) {
-        if (!ext.startsWith(".")) {
-            this.path.append(".");
+    public void setExtension(String ext) {
+        if (ext.length() > 0 && !ext.startsWith(".")) {
+            this.ext = "." + ext;
+        } else {
+            this.ext = ext;
         }
-
-        this.path.append(ext);
     }
 
     /**
@@ -65,11 +60,14 @@ public class FileDistribution {
             this.path.append(File.separator);
             this.path.append(hex.substring(i, i + 2));
         }
+
+        this.path.append(this.ext);
     }
 
     /**
      * @param path
      *            source file path.
+     * 
      * @return Returns true if rename was successful.
      */
     public boolean renameFrom(String path) {
