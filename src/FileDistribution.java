@@ -6,8 +6,9 @@ import java.io.File;
  * @author Adam Kubica (caffecoder) <caffecoder@kaizen-step.com>
  */
 public class FileDistribution {
-    private StringBuffer path = new StringBuffer();
     private String ext = ".dat";
+    private String prefix;
+    private StringBuffer path = new StringBuffer();
 
     /**
      * Creates new instance with directory prefix.
@@ -16,11 +17,15 @@ public class FileDistribution {
      *            directory prefix.
      */
     public FileDistribution(String prefix) {
-        this.path.append(prefix);
+        StringBuffer sb = new StringBuffer(prefix);
 
-        if (this.path.lastIndexOf(File.separator) == this.path.length() - 1) {
-            this.path.deleteCharAt(this.path.length() - 1);
+        if (sb.lastIndexOf(File.separator) == sb.length() - 1) {
+            sb.deleteCharAt(this.prefix.length() - 1);
         }
+
+        this.prefix = sb.toString();
+
+        this.path.append(this.prefix);
     }
 
     /**
@@ -47,6 +52,8 @@ public class FileDistribution {
      *            database file ID etc.
      */
     public void hexPath(int id) {
+        this.path = new StringBuffer(this.prefix);
+
         String hex = Integer.toHexString(id);
 
         int length = hex.length();
