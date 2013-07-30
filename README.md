@@ -9,7 +9,7 @@ Simple library that allows organize distribution of files within hex based tree.
 
 From download page - not yet done!
 
-JAR files can be download from:
+JAR files can be download from [here](http://download.kaizen-step.com/?dir=fdist-java).
 
 ## Example of usage:
 
