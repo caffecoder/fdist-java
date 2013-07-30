@@ -7,8 +7,6 @@ Simple library that allows organize distribution of files within hex based tree.
 
 ## Download file_distribution.jar:
 
-From download page - not yet done!
-
 JAR files can be download from [here](http://download.kaizen-step.com/?dir=fdist-java).
 
 ## Example of usage:
