@@ -2,8 +2,8 @@ import java.io.File;
 
 /**
  * Class for manage hashed file distribution.
- * 
- * @author Adam Kubica (caffecoder) <caffecoder@kaizen-step.com>
+ *
+ * @author Adam Kubica (xcdr) <xcdr@kaizen-step.com>
  */
 public class FileDistribution {
     private String ext = ".dat";
@@ -12,7 +12,7 @@ public class FileDistribution {
 
     /**
      * Creates new instance with directory prefix.
-     * 
+     *
      * @param prefix
      *            directory prefix.
      */
@@ -74,7 +74,7 @@ public class FileDistribution {
     /**
      * @param path
      *            source file path.
-     * 
+     *
      * @return Returns true if rename was successful.
      */
     public boolean renameFrom(String path) {

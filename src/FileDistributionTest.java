@@ -9,8 +9,8 @@ import org.junit.Test;
 
 /**
  * JUnit test for FileDistribution
- * 
- * @author Adam Kubica (caffecoder) <caffecoder@kaizen-step.com>
+ *
+ * @author Adam Kubica (xcdr) <xcdr@kaizen-step.com>
  */
 public class FileDistributionTest {
     FileDistribution fd;
